@@ -17,7 +17,7 @@ def nginx_stats_check():
     for method in methods_list:
         method_count = collection_nginx.count_documents({"method": method})
         print("\tmethod {}: {}".format(method, method_count))
-    status = collec_nginx.count_documents({"method": "GET", "path": "/status"})
+    status = collection_nginx.count_documents({"method": "GET", "path": "/status"})
     print("{} status check".format(status))
 
     print("IPs:")
